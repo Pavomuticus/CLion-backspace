@@ -12,7 +12,6 @@
     (backward-delete-char-untabify (prefix-numeric-value arg))))
 
 (defun previous-line-blank-p ()
-
   (save-excursion
     (previous-line)
     (beginning-of-line)
