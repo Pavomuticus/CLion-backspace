@@ -1,4 +1,5 @@
 (defun clion-backspace (arg)
+  (interactive "*P")
   (if (<= (current-column) (current-indentation))
       (if (= (current-indentation) (c-get-syntactic-indentation (c-guess-basic-syntax)))
 	  (if (previous-line-blank-p)
