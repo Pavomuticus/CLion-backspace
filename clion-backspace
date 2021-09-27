@@ -4,7 +4,7 @@
 	  (if (previous-line-blank-p)
 	      (progn (delete-region (line-beginning-position 0) (line-beginning-position)) (back-to-indentation))
 	    (delete-indentation))
-	(if (= (current-column) 0)
+	(if (bolp)
 	    (if (previous-line-blank-p)
 		(progn (delete-indentation) (c-indent-line))
 	      (delete-indentation))
