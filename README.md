@@ -4,6 +4,7 @@ Make emacs simulate CLion's backspace behavior
 The easiest way is to add the following code in the `.emacs` file
 
 ```elisp
+(require 'clion-backspace)
 (eval-after-load "cc-mode"
   '(define-key c-mode-map (kbd "DEL") 'clion-backspace))
 ```
