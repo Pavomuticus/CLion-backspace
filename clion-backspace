@@ -18,3 +18,5 @@
     (previous-line)
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
+
+(provide 'clion-backspace)
