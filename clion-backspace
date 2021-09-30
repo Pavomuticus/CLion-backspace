@@ -19,4 +19,6 @@
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
 
+(define-key c-mode-map (kbd "DEL") 'clion-backspace)
+
 (provide 'clion-backspace)
