@@ -13,11 +13,9 @@
   (if (save-excursion
 	(forward-line -1)
 	(looking-at "[[:space:]]*$"))
-      (progn
-	(delete-region
-	 (line-beginning-position 0)
-	 (line-beginning-position))
-	t)
+      (null (delete-region
+	     (line-beginning-position 0)
+	     (line-beginning-position)))
     (cl-letf* (((symbol-function 'fixup-whitespace)
 		#'delete-horizontal-space))
 	      (delete-indentation))))
