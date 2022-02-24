@@ -12,7 +12,7 @@
 (defun plb ()
   (if (save-excursion
 	(forward-line -1)
-	(looking-at "[[:space:]]*$"))
+	(looking-at-p "[[:space:]]*$"))
       (null (delete-region
 	     (line-beginning-position 0)
 	     (line-beginning-position)))
